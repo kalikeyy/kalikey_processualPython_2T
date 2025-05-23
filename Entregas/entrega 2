@@ -8,3 +8,15 @@ while contador <=100:
      
     contador += 1
     print (mult)
+
+
+*refeito:
+contador = 0
+print("contando até a data de meu aniversario")
+while contador <=100:  
+    multiplicacao = 23 * contador
+    print(f" 23 x {contador} = {multiplicacao}")
+    contador += 1
+
+    if multiplicacao >= 1000:
+        print ("maior do que 1000")
