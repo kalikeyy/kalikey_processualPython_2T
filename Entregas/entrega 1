@@ -1,0 +1,11 @@
+nome = input("digite seu nome: ")
+hobby = input("digite sua hobby: ")
+profissão = input("digite sua profissão: ")
+salario = input("digite seu salario: ")
+cidade = input("digite seu cidade: ")
+
+print('Ola bem vindo', {nome})
+print('sabemos que seus hobby são', {hobby})
+print('que você trabalha: como', {profissão})
+print('esta ganhando atualmente:', {salario})
+print('e que mora em', {cidade})
