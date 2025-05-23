@@ -1,0 +1,10 @@
+contador = 0
+aniversario = 23
+print("contando até a data de meu aniversario")
+while contador <=100:  
+    mult = contador * aniversario
+    if mult >= 1000:
+        print ("maior ou igual a mil")
+     
+    contador += 1
+    print (mult)
