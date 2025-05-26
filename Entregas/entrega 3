@@ -9,14 +9,13 @@ usuario=["Arthur", "Beatriz", "Caio", "Daniela", "Eduardo", "Fernanda", "Gabriel
 "Taylor", "Zion", "Avery", "Blair", "Casey", "Devon", "Eden", "Finley", "Gray", "Hunter",
 "Jordan", "Kendall", "Leslie", "Milan", "Nico", "Ocean", "Robin", "Sky", "Terry", "Winter"]
 
-for usuario in usuario range(85):
-        print(usuario)
+
+for i in range(len(usuario)):
+    print(f"{i}:{usuario[i]}")
+     
+    if i % 15 == 0:
+        print("teste")
        
-if usuario == 15:
-   print("teste")
-
-
-for i in range(len(nomes)):
-    print(f"Nome na posição {i}: {nomes[i]}")
-
-   
+    if i == 85:
+        print("teste")
+        break
