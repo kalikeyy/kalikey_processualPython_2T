@@ -1,0 +1,17 @@
+def validar_nome(nome):
+    """Verifica se o nome contém apenas caracteres alfabéticos"""
+    return nome.isalpha()
+
+nomes = []
+for i in range(10):
+    nome = input(f"Digite o {i+1}º nome: ")
+    if not validar_nome(nome):
+        print(f"Erro: '{nome}' contém caracteres inválidos. O programa será interrompido.")
+        exit()
+    nomes.append(nome)
+
+nomes.sort()
+
+print("\nLista de nomes ordenada:")
+for nome in nomes:
+    print(f"{nome}: {len(nome)} letras")
