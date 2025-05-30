@@ -14,4 +14,4 @@ nomes.sort()
 
 print("\nLista de nomes ordenada:")
 for nome in nomes:
-    print(f"{nome}: {len(nome)} letras")
+    print(f"{nome}")
