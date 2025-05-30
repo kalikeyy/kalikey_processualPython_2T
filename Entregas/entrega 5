@@ -1,5 +1,4 @@
 def validar_nome(nome):
-    """Verifica se o nome contém apenas caracteres alfabéticos"""
     return nome.isalpha()
 
 nomes = []
