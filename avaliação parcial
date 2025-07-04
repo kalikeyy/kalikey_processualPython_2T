@@ -1,0 +1,63 @@
+def main():
+    print("=== Sistema de cadastro ===")
+   
+    while True:
+        print("\nescolher tipo de perfil:")
+        print("1 - responsavel")
+        print("2 - aluno")
+        print("3 - professor")
+        print("4 - Sair do sistema")
+        
+        try:
+            opcao = int(input("\nEscolher (1-4): "))
+        except ValueError:
+            print("Por favor, digite um número válido.")
+            continue
+           
+        if opcao == 4:
+            print("Saindo do sistema...")
+            break
+        elif opcao not in [1, 2, 3]:
+            print("Opção inválida. Por favor, escolha entre 1 e 4.")
+            continue
+           
+        tipo_perfil = {
+            1: "responsavel",
+            2: "aluno",
+            3: "professor",
+        }
+       
+        perfil_selecionado = tipo_perfil[opcao]
+        print(f"\nForma de cadastro: {perfil_selecionado}")
+       
+        print("\nPor favor, informe seus dados:")
+        nome = input("Nome completo: ")
+        email = input("E-mail: ")
+        cpf = int(input("cpf:"))
+        telefone = int(input("telefone:"))
+        endereço = input("endereço: ")
+        senha = input("senha: ")
+        
+        if opcao == 1:
+            nome = input("Nome completo do aluno: ")
+            cgm = int(input("cgm do aluno: "))
+        
+        elif opcao == 2:
+            email = input("E-mail escolar do aluno:")
+            cgm = int(input("cgm do aluno:"))
+       
+        confirmacao = input("\nDeseja concluir cadastro? (S/N): ").strip().upper()
+       
+        if confirmacao == 'S':
+            print("\nProcessando cadastro...")
+            print("cadastro concluído com sucesso!")
+            break
+        else:
+            print("\ncadastro cancelado.")
+            if continuar != 'S':
+                print("Saindo do sistema...")
+        
+        break
+if __name__ == "__main__":
+    main()
+        
