@@ -1,0 +1,48 @@
+def sistema_professor():
+    print("=== Sistema do Professor ===")
+    nome_prof = input("Nome do professor: ")
+
+    notas_alunos = {}
+
+    while True:
+        print(f"\nOlá, professor {nome_prof}!")
+        print("1 - Inserir nota de aluno")
+        print("2 - Ver todas as notas lançadas")
+        print("3 - Sair")
+
+        try:
+            opcao = int(input("Escolha uma opção (1-3): "))
+        except ValueError:
+            print("Digite um número válido.")
+            continue
+
+        if opcao == 1:
+            aluno = input("Nome do aluno: ").strip().title()
+            materia = input("Nome da matéria: ").strip().title()
+            try:
+                nota = float(input(f"Nota de {aluno} em {materia}: "))
+                if aluno not in notas_alunos:
+                    notas_alunos[aluno] = {}
+                notas_alunos[aluno][materia] = nota
+                print(f"Nota registrada com sucesso.")
+            except ValueError:
+                print("Nota inválida. Use números.")
+
+        elif opcao == 2:
+            if not notas_alunos:
+                print("Nenhuma nota registrada ainda.")
+            else:
+                for aluno, materias in notas_alunos.items():
+                    print(f"\nAluno: {aluno}")
+                    for mat, nota in materias.items():
+                        print(f"  {mat}: {nota}")
+
+        elif opcao == 3:
+            print("Encerrando o sistema do professor.")
+            break
+
+        else:
+            print("Opção inválida.")
+
+if __name__ == "__main__":
+    sistema_professor()
