@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Estilo Minimalo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Barra preta superior */
+    .top-bar {
+      background-color: #000;
+      color: #fff;
+      font-size: 14px;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    /* Barra principal */
+    .header {
+      background-color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* Ícone com notificação */
+    .cart-icon {
+      position: relative;
+    }
+
+    .cart-icon::after {
+      content: "2";
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background-color: red;
+      color: white;
+      font-size: 11px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 16px;
+    }
+
+  </style>
+  <!-- Font Awesome para ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Barra preta superior -->
+  <div class="top-bar">
+    <div>🔖 Summer Sales Discount <a href="#">Learn More</a></div>
+    <div>
+      <a href="#">My account</a>
+      <a href="#">Checkout</a>
+    </div>
+  </div>
+
+  <!-- Cabeçalho principal -->
+  <header class="header">
+    <div class="menu">
+      <a href="#">HOME</a>
+      <a href="#">POST</a>
+      <a href="#">INSPIRATION</a>
+      <a href="#">SHOP</a>
+      <a href="#">PAGES</a>
+    </div>
+
+    <div class="logo">MINIMALO</div>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="cart-icon"><i class="fas fa-shopping-bag"></i></a>
+      <a href="#"><i class="fas fa-search"></i></a>
+    </div>
+  </header>
+
+</body>
+</html>
