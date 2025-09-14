@@ -7,10 +7,15 @@ for i in range(10):
     if not validar_numero(numero):
         print(f"Erro: '{numero}' contém caracteres inválidos. O programa será interrompido.")
         exit()
-    nomes.append(nome)
+    numeros.append(int(numero))
 
-numeros.sort()
+print("\nLista original:")
+print(numeros)
 
-print("\nLista de numero ordenada:")
-for numero in numeros:
-    print(f"{numero}")
+ordenada = sorted(numeros)
+print("\nLista ordenada crescente:")
+print(ordenada)
+
+sem_repetidos = list(set(numeros))
+print("\nLista sem números repetidos:")
+print(sem_repetidos)
