@@ -1,0 +1,11 @@
+def sistema():
+    usuarios = {}  
+    
+   while true:
+       print("seja bem-vindo.\nquem seria você?")
+       print("1-aluno")
+       print("2-professor")
+       escolha = input("escolha uma opção:")
+       
+if __name__ == "__main__":
+    sistema()
