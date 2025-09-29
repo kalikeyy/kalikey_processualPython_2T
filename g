@@ -1,21 +1,25 @@
-def validar_numero(numero):
-    return numero.isdigit()
+def adicionar_curso():
+    print("=== Adicionar novo curso ===")
+    nome = input("Digite o nome do curso: ")
+    professor = input("Digite o nome do professor: ")
+    carga_horaria = input("Digite a carga horária (em horas): ")
+    descricao = input("Digite a descrição do curso: ")
 
-numeros = []
-for i in range(10):
-    numero = input(f"Digite o {i+1}º numero: ")
-    if not validar_numero(numero):
-        print(f"Erro: '{numero}' contém caracteres inválidos. O programa será interrompido.")
-        exit()
-    numeros.append(int(numero))
+    curso = {
+        "nome": nome,
+        "professor": professor,
+        "carga_horaria": carga_horaria,
+        "descricao": descricao
+    }
 
-print("\nLista original:")
-print(numeros)
+    print("\nCurso postado com sucesso!")
+    print(f"Nome do curso: {curso['nome']}")
+    print(f"Professor: {curso['professor']}")
+    print(f"Carga horária: {curso['carga_horaria']} horas")
+    print(f"Descrição: {curso['descricao']}")
 
-ordenada = sorted(numeros)
-print("\nLista ordenada crescente:")
-print(ordenada)
+    return curso
 
-sem_repetidos = list(set(numeros))
-print("\nLista sem números repetidos:")
-print(sem_repetidos)
+
+# Executar
+adicionar_curso()
