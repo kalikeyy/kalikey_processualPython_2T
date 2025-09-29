@@ -1,13 +1,58 @@
-import random
-import string
-nome = input("Digite seu nome: ")
-if nome.lower() != "kalikey":
-    print("Erro: Somente o usuário 'kalikey' pode gerar a senha!")
-    exit()
-def gerar_senha(comprimento):
-    caracteres = string.ascii_letters + string.digits + string.punctuation
-    senha = ''.join(random.choice(caracteres) for _ in range(comprimento))
-    return senha
+# Lista para guardar os posts
+portfolio = []
 
-senha_gerada = gerar_senha(13)
-print(f"Sua senha gerada é:{senha_gerada}{nome}{senha_gerada}")
+
+def criar_post():
+    print("\n=== Criar novo post ===")
+    titulo = input("Título da arte: ")
+    autor = input("Nome do autor: ")
+    categoria = input("Categoria (ex: ilustração, logo, pintura digital): ")
+    descricao = input("Descrição da arte: ")
+
+    post = {
+        "titulo": titulo,
+        "autor": autor,
+        "categoria": categoria,
+        "descricao": descricao
+    }
+
+    portfolio.append(post)
+    print("\n Post criado com sucesso!")
+
+
+def exibir_portfolio():
+    print("\n Portfólio de Artes Postadas")
+    if not portfolio:
+        print("Nenhum post foi feito ainda.")
+    else:
+        for i, post in enumerate(portfolio, 1):
+            print(f"\n--- Post {i} ---")
+            print(f"Título: {post['titulo']}")
+            print(f"Autor: {post['autor']}")
+            print(f"Categoria: {post['categoria']}")
+            print(f"Descrição: {post['descricao']}")
+
+
+# Programa principal com menu
+def menu():
+    while True:
+        print("\n===== Plataforma de Design =====")
+        print("1. Criar post")
+        print("2. Ver portfólio")
+        print("3. Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            criar_post()
+        elif opcao == "2":
+            exibir_portfolio()
+        elif opcao == "3":
+            print("\n Saindo da plataforma...")
+            break
+        else:
+            print("Opção inválida, tente novamente!")
+
+
+# Executar
+menu()
